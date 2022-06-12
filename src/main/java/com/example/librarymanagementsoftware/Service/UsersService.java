@@ -61,9 +61,11 @@ public class UsersService {
     public Object addCartToUser(CartDTO cartDTO) {
         Users user = usersRepository.findById(cartDTO.getCartID())
                 .orElseThrow(() -> new InvalidIDException("user id is invalid"));
-        Cart cart = new Cart(null, cartDTO.getPaymentMethod(), cartDTO.getUserID(),cartDTO.getBookID(), user);
+        Cart cart = new Cart();
+        cart.setPaymentMethod(cartDTO.getPaymentMethod());
+        cart.setUsers(user);
+        user.setCart(cart);
         cartRepository.save(cart);
-        usersRepository.save(user);
         return usersRepository.findAll();
 
     }
