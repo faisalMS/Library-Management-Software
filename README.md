@@ -59,7 +59,8 @@ Cart :
 
 =============
 
-Class Diagram: <img width="834" alt="Screen Shot 1443-11-12 at 9 01 19 PM" src="https://user-images.githubusercontent.com/83320125/173204092-590aea64-b5da-43f5-99dc-5fb2b2cef9fd.png">
+Class Diagram: <img width="823" alt="Screen Shot 1443-11-13 at 2 11 53 PM" src="https://user-images.githubusercontent.com/83320125/173230296-1e3ba83c-4468-4d78-b678-8f5672eb3920.png">
+
 
 =============
 
