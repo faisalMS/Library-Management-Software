@@ -21,20 +21,9 @@ public class Cart {
     @NotEmpty(message = "paymentMethod is required")
     @Pattern(regexp = "(Cash|Credit Card)", message = "Payment method most be Cash or Credit Card")
     private String paymentMethod;
-    private Integer userId;
-    private Integer bookId;
-
-    public Cart(Integer cartID, String PaymentMethod, Integer userID, Integer bookID, Users users) {
-        cartId = cartID;
-        this.paymentMethod = PaymentMethod;
-        userId = userID;
-        bookId = bookID;
-        this.users = users;
-
-    }
+    
 
     @OneToOne(cascade  = CascadeType.ALL)
-    @MapsId
     @JsonIgnore
     private Users users;
 
